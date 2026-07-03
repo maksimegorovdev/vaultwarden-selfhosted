@@ -26,7 +26,7 @@
    ```dotenv
    DOMAIN=https://subdomain.domain.com
    ACME_EMAIL=admin@example.com
-   ADMIN_TOKEN=сгенерированный токен из 2 пункта
+   ADMIN_TOKEN=сгенерированный_токен_из_2_пункта
    ```
 
 4. Создать пароль приложения (облачного хранилища) с типом WebDAV
