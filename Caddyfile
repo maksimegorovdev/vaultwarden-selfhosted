@@ -1,0 +1,17 @@
+{$DOMAIN} {
+  log {
+    level INFO
+    output file {$LOG_FILE} {
+      roll_size 10MB
+      roll_keep 10
+    }
+  }
+
+  tls {$EMAIL}
+
+  encode zstd gzip
+
+  reverse_proxy vaultwarden:80 {
+    header_up X-Real-IP {remote_host}
+  }
+}

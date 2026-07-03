@@ -1,0 +1,19 @@
+[vaultwarden]
+enabled  = true
+logpath  = /var/log/vaultwarden/vaultwarden.log
+filter   = vaultwarden
+action   = iptables-allports[name=vaultwarden, chain=DOCKER-USER, protocol=all]
+ports    = http,https
+maxretry = 5
+findtime = 1h
+bantime  = 24h
+
+[vaultwarden-admin]
+enabled  = true
+logpath  = /var/log/vaultwarden/vaultwarden.log
+filter   = vaultwarden-admin
+action   = iptables-allports[name=vaultwarden-admin, chain=DOCKER-USER, protocol=all]
+ports    = http,https
+maxretry = 3
+findtime = 10h
+bantime  = 7d

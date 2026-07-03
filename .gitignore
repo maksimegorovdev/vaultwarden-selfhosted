@@ -1,0 +1,16 @@
+.env
+
+vw-data/
+
+caddy-data/
+caddy-config/
+
+fail2ban-data/*
+!fail2ban-data/filter.d/
+!fail2ban-data/jail.d/
+
+rclone-data/
+
+.idea/
+
+.DS_Store
